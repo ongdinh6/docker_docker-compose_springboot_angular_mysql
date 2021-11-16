@@ -3,9 +3,8 @@ version: '3.8'
 
 services:
 # Database Service (Mysql)
-  db:
+  mysql:
     image: mysql:8.0.27
-    container_name: database
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -14,6 +13,8 @@ services:
       MYSQL_PASSWORD: root
     ports:
       - 3306:3306
+    networks:
+      - angular_course_backend
       
   # App backend service
   app-server:
@@ -22,16 +23,25 @@ services:
       context: api-student-management
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
-    restart: always
+      - "8080:80"
     links:
-      - db
+      - mysql
     depends_on: 
-      - db # This service depends on mysql. Start that first.
+      - mysql # This service depends on mysql. Start that first.
     environment: # Pass environment variables to the service
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/studentdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/studentdb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
+      #DB_HOST: mysql
+      #DB_NAME: studentdb
+      #DB_USERNAME: root
+      #DB_PASSWORD: root
+      #DB_SCHEMA: public
+      #DB_METHOD: update
+      #PORT: 80
+    networks:
+      - angular_course_backend
+      - angular_course_frontend
 
   # Frontend Service 
   app-client:
@@ -40,7 +50,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4200:80"
-    restart: always
     depends_on:
-      - app-server 
+      - app-server
+    networks:
+      - angular_course_backend
+      
+networks:
+  angular_course_backend:
+  angular_course_frontend:
  
