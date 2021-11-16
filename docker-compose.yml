@@ -1,0 +1,46 @@
+
+version: '3.8'
+
+services:
+# Database Service (Mysql)
+  db:
+    image: mysql:8.0.27
+    container_name: database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: studentdb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    ports:
+      - 3306:3306
+      
+  # App backend service
+  app-server:
+    # Configuration for building the docker image for the backend service
+    build:
+      context: api-student-management
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
+    links:
+      - db
+    depends_on: 
+      - db # This service depends on mysql. Start that first.
+    environment: # Pass environment variables to the service
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/studentdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  # Frontend Service 
+  app-client:
+    build:
+      context: angular-qlsv-demo
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    restart: always
+    depends_on:
+      - app-server 
+ 
