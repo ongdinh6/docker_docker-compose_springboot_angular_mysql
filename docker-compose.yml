@@ -30,7 +30,7 @@ services:
     depends_on: 
       - mysql # This service depends on mysql. Start that first.
     environment: # Pass environment variables to the service
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/studentdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3307/studentdb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: ongdinh101199
       DB_HOST: mysql
