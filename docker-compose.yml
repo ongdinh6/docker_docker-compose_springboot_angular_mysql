@@ -3,18 +3,18 @@ version: '3.8'
 
 services:
 # Database Service (Mysql)
-  mysql:
+  studentdb:
     image: mysql:8.0.27
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: studentdb
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_PASSWORD: ongdinh101199
     ports:
-      - 3306:3306
-    networks:
-      - angular_course_backend
+      - 3307:3306
+    #networks:
+      #- angular_course_backend
       
   # App backend service
   app-server:
@@ -23,25 +23,26 @@ services:
       context: api-student-management
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "8080:8080"
+    restart: always
     links:
-      - mysql
+      - studentdb
     depends_on: 
-      - mysql # This service depends on mysql. Start that first.
+      - studentdb # This service depends on mysql. Start that first.
     environment: # Pass environment variables to the service
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/studentdb
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/studentdb
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
-      #DB_HOST: mysql
-      #DB_NAME: studentdb
-      #DB_USERNAME: root
-      #DB_PASSWORD: root
-      #DB_SCHEMA: public
-      #DB_METHOD: update
-      #PORT: 80
-    networks:
-      - angular_course_backend
-      - angular_course_frontend
+      SPRING_DATASOURCE_PASSWORD: ongdinh101199
+      DB_HOST: localhost
+      DB_NAME: studentdb
+      DB_USERNAME: root
+      DB_PASSWORD: ongdinh101199
+      DB_SCHEMA: public
+      DB_METHOD: update
+      PORT: 80
+    #networks:
+      #- angular_course_backend
+      #- angular_course_frontend
 
   # Frontend Service 
   app-client:
@@ -50,12 +51,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4200:80"
+    restart: always
     depends_on:
       - app-server
-    networks:
-      - angular_course_backend
+    #networks:
+      #- angular_course_backend
       
-networks:
-  angular_course_backend:
-  angular_course_frontend:
+#networks:
+  #angular_course_backend:
+  #angular_course_frontend:
  
