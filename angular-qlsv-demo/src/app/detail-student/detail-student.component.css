@@ -1,0 +1,21 @@
+.row-info {
+  display: flex;
+  padding: 0px 0px 10px 0px;
+}
+.row-info > label {
+  width: 10%;
+}
+.info-student {
+  width: 80%;
+  margin: auto;
+}
+.btn-footer > button {
+  margin: 0px 10px 0px 0px;
+}
+.errors{
+  color: red;
+  font-size: 12px;
+}
+.btnFooter{
+  border-radius: 0;
+}

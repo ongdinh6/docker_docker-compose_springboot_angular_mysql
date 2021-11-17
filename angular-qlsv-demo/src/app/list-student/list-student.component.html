@@ -1,0 +1,73 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="main-card mb-3 card">
+        <div class="card-header">
+          <h2>List Student Management</h2>
+        </div>
+        <h3>Data Table</h3>
+        <div class="table-responsive">
+          <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Date Of Birth</th>
+                <th>Address</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students" ng-model-options="{debounce: 5000}">
+                <td>{{ student.id }}</td>
+                <td>{{ student.fullName }}</td>
+                <td>{{ student.birthDay }}</td>
+                <td>{{ student.address }}</td>
+                <td>
+                  <!-- <button (click)="goDetail(student.id)">Details</button> -->
+                  <a routerLink="/detail/{{ student.id }}">Details</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- right body  -->
+          <div class="form-student-info">
+            <form (ngSubmit)="submitAddNewStudent()">
+              <div>
+                <h3 class="form-title">Student Info</h3>
+
+              </div>
+              <div class="form-body">
+                <div class="row-info col-md-12">
+                  <label class="col-md-4" for="fullName">Fullname:</label><br>
+                  <input class="input-info form-control col-md-8" type="text" [(ngModel)]="student.fullName"
+                    name="fullName" placeholder="Enter full name">
+                  <br>
+                </div>
+                <p class="errors">{{errorFullName}}</p>
+                <div class="row-info col-md-12">
+                  <label class="col-md-6" for="birthDay">Birth Date:</label><br>
+                  <input class="input-info form-control col-md-8" type="date" [(ngModel)]="student.birthDay"
+                    name="birthDay" [placeholder]="errorDate===''?'Enter date of birth':errorDate">
+                  <br><br>
+                </div>
+                <p class="errors">{{errorDate}}</p>
+                <div class="row-info col-md-12">
+                  <label class="col-md-4" for="address">Address:</label><br>
+                  <input class="input-info form-control col-md-8" type="text" [(ngModel)]="student.address"
+                    name="address" placeholder="Enter address"><br>
+                </div>
+              </div>
+              <div class="btn-save">
+                <button type="submit" class="btn btn-success btnSave">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- end body -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

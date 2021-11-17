@@ -1,0 +1,11 @@
+<main>
+  <header>
+    <!-- chứa component con -->
+    <app-header (loginHandler)="onLoginHandler($event)"></app-header>
+  </header>
+  <section class="container">
+    <router-outlet></router-outlet>
+  </section>
+  <footer>
+  </footer>
+</main>

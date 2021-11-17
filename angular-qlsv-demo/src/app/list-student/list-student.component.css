@@ -1,0 +1,72 @@
+.main {
+  margin: auto;
+  width: 1100px;
+}
+h2 {
+  text-align: center;
+  border-bottom: solid 1px lightgray;
+}
+.row,
+.table-responsive {
+  display: flex;
+}
+.main-card {
+  background-color: whitesmoke;
+  padding: 30px;
+}
+table {
+  float: left;
+  width: 600px;
+}
+thead {
+  height: 53px !important;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: solid 1px lightgray;
+  padding: 10px;
+}
+
+.form-student-info {
+  background-color: white;
+  float: right;
+  margin: 0px 0px 0px 50px;
+  border-radius: 5px;
+  width: 400px;
+  border: 1px solid lightgray;
+}
+.form-title {
+  padding: 0px 0px 5px 0px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.row-info {
+  display: flex;
+  width: 100%;
+  padding: 0px 0px 10px 10px;
+}
+.row-info > label {
+  width: 30%;
+  line-height: 2;
+}
+.input-info {
+  height: 30px;
+  width: 60%;
+}
+.btn-save {
+  text-align: center;
+}
+.btnSave {
+  width: 20%;
+  border-radius: 0;
+}
+.errors {
+  padding-left: 130px;
+  font-size: 13px;
+  color: red;
+  font-weight: bold;
+}

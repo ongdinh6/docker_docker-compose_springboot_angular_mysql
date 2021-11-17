@@ -1,0 +1,32 @@
+<!--
+  this is login component page
+ -->
+<div class="container">
+  <div class="login-form">
+    <form class="modal-content animate" (ngSubmit)="submitLogin()" method="post">
+      <div class="imgcontainer">
+        <h3>Login Page Wellcome</h3>
+        <h5 class="error">{{message}}</h5>
+      </div>
+
+      <div>
+        <label for="uname"><b>Email</b></label>
+        <input [(ngModel)]="loginForm.email" type="text" placeholder="Enter Email Address" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input [(ngModel)]="loginForm.password" type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input  type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+</div>

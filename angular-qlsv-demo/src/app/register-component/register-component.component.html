@@ -1,0 +1,66 @@
+<!--
+  This is register component
+  Template design by mishajib https://bootsnipp.com/snippets/z8MPd
+ -->
+<div class="container">
+  <div class="my-form">
+    <div class="body-form">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card-header">
+            <h3>Register Account</h3>
+            <hr />
+          </div>
+          <div class="card-body">
+            <form name="my-form" (ngSubmit)="doRegister()" method="post">
+              <div class="form-group row">
+                <label for="full_name" class="col-md-12 col-form-label text-md-right">Full Name*</label>
+                <div class="col-md-12">
+                  <input type="text" [(ngModel)]="userForm.fullName" class="form-control" name="full-name" placeholder="Enter your full name" required>
+                </div>
+                <p class="errors">{{errorFullName}}</p>
+              </div>
+
+              <div class="form-group row">
+                <label for="email_address" class="col-md-12 col-form-label text-md-right">E-Mail Address*</label>
+                <div class="col-md-12">
+                  <input type="email"  [(ngModel)]="userForm.email" class="form-control" name="email-address" placeholder="Enter your email address"  required>
+                </div>
+                <p class="errors">{{errorEmail}}</p>
+              </div>
+
+              <div class="form-group row">
+                <label for="user_name" class="col-md-12 col-form-label text-md-right">Password*</label>
+                <div class="col-md-12">
+                  <input type="password"  [(ngModel)]="userForm.password" class="form-control" name="password" placeholder="Password should be at least 8 characters. Ex: '123abcA@'" required>
+                </div>
+                <p class="errors">{{errorPassword}}</p>
+              </div>
+
+              <div class="form-group row">
+                <label for="user_name" class="col-md-12 col-form-label text-md-right">Retype Password*</label>
+                <div class="col-md-12">
+                  <input type="password"  [(ngModel)]="userForm.rePassword" class="form-control" name="rePassword" placeholder="Confirm your password" required>
+                </div>
+                <p class="errors">{{errorRePassword}}</p>
+              </div>
+
+              <div class="form-group row">
+                <label for="user_name" class="col-md-4 col-form-label text-md-right">Address Details</label>
+                <div class="col-md-12">
+                  <input type="text"  [(ngModel)]="userForm.address" class="form-control" name="address">
+                </div>
+              </div>
+
+              <div class="col-md-12 card-footer">
+                <button type="submit" class="btn btn-success radius-0">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

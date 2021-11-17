@@ -1,0 +1,30 @@
+<!-- <div class="main">
+  <input [(ngModel)]="username" type="text" [title]="'That is ' + username"/>
+  <button (click)="setUsername(username)">say hello</button>
+  <p *ngIf="username !==''; then showHello; else showWarning"></p>
+
+  <ng-template #showHello>
+    <h1>Hello, {{username}}</h1>
+  </ng-template>
+  <ng-template #showWarning>
+    <h1>Please enter your username</h1>
+  </ng-template>
+
+  <div class="fruit">
+    <ul *ngFor="let fruit of fruits; let i = index;">
+      <li>{{i + 1}}. {{fruit}}</li>
+    </ul>
+  </div>
+</div> -->
+<!-- This is header of the page -->
+<div class="header">
+  <h1>WELLCOME TO ANGULAR </h1>
+  <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+  <nav>
+    <a routerLink="/login-page" routerLinkActive="active">Login</a>
+    <a routerLink="/register-page" routerLinkActive="active">Register</a>
+  </nav>
+  <hr/>
+</div>
+<router-outlet></router-outlet>
+

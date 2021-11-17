@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="info-student">
+    <h3>Student Info</h3>
+
+    <div class="body-info">
+      <form class="form-student-info" (ngSubmit)="updateStudentInfo()">
+        <div class="form-body">
+          <div class="row-info">
+            <label for="fullnNme">Fullname:</label><br>
+            <input class="input-info" type="text" [(ngModel)]="student.fullName" name="fullName"
+              placeholder="Enter fullname">
+          </div>
+          <p class="errors">{{errorMessageFullName}}</p>
+          <div class="row-info">
+            <label for="birthDay">Date of birth:</label><br>
+            <input class="input-info" type="text" [(ngModel)]="student.birthDay" name="birthDay">
+          </div>
+          <p class="errors">{{errorMessageDate}}</p>
+          <div class="row-info">
+            <label for="address">Address:</label><br>
+            <input class="input-info" type="text" [(ngModel)]="student.address" name="address"
+              placeholder="Enter address"><br>
+          </div>
+        </div>
+        <div class="btn-footer">
+          <button type="submit" class="btn btn-success btnFooter">Edit</button>
+          <button type="button" class="btn btn-danger btnFooter" [routerLink]="['/list-student']" routerLinkActive="router-link-active" (click)="removeStudentById(student.id)">Remove From List</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
