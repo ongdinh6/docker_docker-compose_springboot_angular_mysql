@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from '../class/student';
@@ -15,7 +15,8 @@ export class ListStudentComponent implements OnInit {
   //dùng phải khai báo
   constructor(
     private httpServerService: HttpServerService,
-    private router: Router
+    private router: Router,
+    private datepipe: DatePipe
   ) {}
 
   ngOnInit(): void {
@@ -26,10 +27,11 @@ export class ListStudentComponent implements OnInit {
   errorFullName: string = '';
   errorDate: string = '';
   public submitAddNewStudent(): void {
+    let newDate = this.datepipe.transform(this.student.birthDay, 'MM/dd/yyyy');
+    this.student.setBirthDay(newDate);
     /* 2. add new student - đăng kí với service */
     this.httpServerService.addStudent(this.student).subscribe(
       (response) => {
-        alert(response)
        if(response.status==400){
         this.errorFullName = response.message;
        }

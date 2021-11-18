@@ -26,8 +26,7 @@ export class RegisterComponentComponent implements OnInit {
   doRegister() {
     this.httpServerService.registerService(this.userForm).subscribe(
       (response) => {
-        
-        alert("Register account is successful !")
+        //alert("Register account is successful !")
         this.router.navigate(['/login-page'])
       },
       (error) => {

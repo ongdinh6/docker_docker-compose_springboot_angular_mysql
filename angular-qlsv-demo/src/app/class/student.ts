@@ -10,4 +10,8 @@ export class Student {
     this.birthDay = "";
     this.address = "";
   }
+
+  setBirthDay(newDate:any){
+    this.birthDay = newDate;
+  }
 }

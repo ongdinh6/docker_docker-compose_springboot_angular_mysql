@@ -25,7 +25,7 @@
                 <td>{{ student.address }}</td>
                 <td>
                   <!-- <button (click)="goDetail(student.id)">Details</button> -->
-                  <a routerLink="/detail/{{ student.id }}">Details</a>
+                  <a routerLink="/detail/{{ student.id }}" [id]="'detail'+student.id">Details</a>
                 </td>
               </tr>
 
@@ -49,7 +49,7 @@
                 <div class="row-info col-md-12">
                   <label class="col-md-6" for="birthDay">Birth Date:</label><br>
                   <input class="input-info form-control col-md-8" type="date" [(ngModel)]="student.birthDay"
-                    name="birthDay" [placeholder]="errorDate===''?'Enter date of birth':errorDate">
+                    name="birthDay">
                   <br><br>
                 </div>
                 <p class="errors">{{errorDate}}</p>

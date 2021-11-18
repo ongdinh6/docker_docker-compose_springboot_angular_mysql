@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +29,9 @@ import { RegisterComponentComponent } from './register-component/register-compon
   ],
   exports:[RouterModule],
   //this is contain all components of my application
-  providers: [],
+  providers: [
+    DatePipe,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
