@@ -10,12 +10,12 @@
             <input class="input-info" type="text" [(ngModel)]="student.fullName" name="fullName"
               placeholder="Enter fullname">
           </div>
-          <p class="errors">{{errorMessageFullName}}</p>
+          <p class="errors errorFullName">{{errorMessageFullName}}</p>
           <div class="row-info">
             <label for="birthDay">Date of birth:</label><br>
             <input class="input-info" type="text" [(ngModel)]="student.birthDay" name="birthDay">
           </div>
-          <p class="errors">{{errorMessageDate}}</p>
+          <p class="errors errorBirthDay">{{errorMessageDate}}</p>
           <div class="row-info">
             <label for="address">Address:</label><br>
             <input class="input-info" type="text" [(ngModel)]="student.address" name="address"

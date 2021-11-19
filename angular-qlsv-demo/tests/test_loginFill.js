@@ -9,13 +9,13 @@ test("Fill login form", async (t) => {
   await loginFill.typePassword('123abcA@');
   await loginFill.submitLogin();
   await t.navigateTo('/list-student');
-  await t.wait(5000);
+  await t.wait(1000);
 });
 
 test('Verify does not fill login form', async (t) =>{
   await loginFill.submitLogin();
   await t.expect(Selector('.error').innerText).eql('Email or password is incorrect!');
-  await t.wait(5000);
+  await t.wait(1000);
 });
 
 test('Verify login failed', async t => {
@@ -23,5 +23,5 @@ test('Verify login failed', async t => {
   await loginFill.typePassword('123abcA@123');
   await loginFill.submitLogin();
   await t.expect(Selector('.error').innerText).eql('Email or password is incorrect!');
-  await t.wait(5000);
+  await t.wait(1000);
 });
