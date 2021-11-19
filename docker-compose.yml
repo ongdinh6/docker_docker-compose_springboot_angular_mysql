@@ -3,51 +3,49 @@ version: '3.8'
 
 services:
 # Database Service (Mysql)
-  mysql:
-    image: mysql:8.0.27
+  datasource:
+    image: mysql
+    container_name: datasource
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: studentdb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: ongdinh101199
-    ports:
-      - 3307:3306
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=studentdb
+      - MYSQL_USER=mysqldb
+      - MYSQL_PASSWORD=ongdinh101199
+    #ports:
+      #- 3306:3306
     networks:
       - angular_course_backend
+    volumes:
+      - mysqldata:/var/lib/mysql
       
   # App backend service
   app-server:
     # Configuration for building the docker image for the backend service
+    container_name: springboot-server
     build:
-      context: api-student-management
+      context: ./api-student-management
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
     restart: always
-    links:
-      - mysql
     depends_on: 
-      - mysql # This service depends on mysql. Start that first.
+      - datasource # This service depends on mysql. Start that first.
     environment: # Pass environment variables to the service
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3307/studentdb
-      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_URL: jdbc:mysql://datasource:3306/studentdb
+      SPRING_DATASOURCE_USERNAME: mysqldb
       SPRING_DATASOURCE_PASSWORD: ongdinh101199
-      DB_HOST: mysql
-      DB_NAME: studentdb
-      DB_USERNAME: root
-      DB_PASSWORD: ongdinh101199
-      DB_SCHEMA: public
-      DB_METHOD: update
-      PORT: 80
+      
+     
     networks:
       - angular_course_backend
       - angular_course_frontend
 
   # Frontend Service 
   app-client:
+    container_name: angular-client
     build:
-      context: angular-qlsv-demo
+      context: ./angular-qlsv-demo
       dockerfile: Dockerfile
     ports:
       - "4200:80"
@@ -60,4 +58,6 @@ services:
 networks:
   angular_course_backend:
   angular_course_frontend:
+volumes:
+  mysqldata:
  

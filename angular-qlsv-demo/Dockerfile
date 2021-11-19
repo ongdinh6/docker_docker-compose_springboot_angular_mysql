@@ -10,26 +10,27 @@ WORKDIR /app
 # the dependencies. This is a separate step so the dependencies
 # will be cached unless changes to one of those two files
 # are made.
-COPY package*.json ./
-RUN npm install
+# COPY package*.json .
 
 # Copy the main application
-COPY . ./
+COPY . .
+RUN npm install
 
 # Arguments
-ARG configuration=production
+# ARG configuration=production
 
 # Build the application
-RUN npm run build -- --outputPath=./dist/out --configuration $configuration
+RUN npm run build --prod
 
 #### Stage 2, use the compiled app, ready for production with Nginx
-FROM nginx
+FROM nginx:alpine
 
-# Copy the angular build from Stage 1
-COPY --from=build /app/dist/out/ /usr/share/nginx/html
 
 # Copy our custom nginx config
-COPY /nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY src/nginx/etc/conf.d/default.conf /etc/nginx/conf/default.conf
+
+# Copy the angular build from Stage 1
+COPY --from=build app/dist/angular-qlsv-demo usr/share/nginx/html
 
 
 # Expose port 80 to the Docker host, so we can access it

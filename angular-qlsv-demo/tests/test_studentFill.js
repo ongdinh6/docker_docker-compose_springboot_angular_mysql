@@ -17,6 +17,7 @@ test
     //     .expect(input.value).eql('2017-05-05');
     await studentFill.typeAddress('Binh Duong');
     await studentFill.submitSave();
+    await t.take
   });
 
 

@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test-e2e": "testcafe chrome:headless ui/**/*.e2e.js"
+    "test-e2e": "testcafe chrome:headless ui/**/*.e2e.js",
+    "test-reports": "testcafe chrome tests/*.js -s path=reports/images,takeOnFails=true --skips-js-errors --reporter cucumber-json --reporter-json-folder=reports/htmlReports/jsonReports",
+    "report": "node report-generator.js"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +21,10 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
     "rxjs": "~7.4.0",
+    "testcafe-reporter-cucumber-json": "^6.3.0",
+    "testcafe-reporter-html": "^1.4.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -35,7 +40,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.4.3",
-    "testcafe":"~1.17.1"
+    "testcafe": "~1.17.1",
+    "typescript": "~4.4.3"
   }
 }
