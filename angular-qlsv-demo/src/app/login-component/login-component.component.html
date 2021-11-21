@@ -3,12 +3,12 @@
  -->
 <div class="container">
   <div class="login-form">
-    <form class="modal-content animate form-group" (ngSubmit)="submitLogin()" method="post">
+    <form class="modal-content animate form-group form" (ngSubmit)="submitLogin()" method="post">
       <div class="imgcontainer">
-        <h3>Login Page Wellcome</h3>
+        <h3>Login To System</h3>
         <h5 class="error">{{message}}</h5>
       </div>
-
+      <hr/>
       <div>
         <label for="email"><b>Email</b></label>
         <input [(ngModel)]="loginForm.email" id="emailTxt" type="email" placeholder="Enter Email Address" name="email" required>
@@ -22,7 +22,7 @@
         </label>
       </div>
 
-      <div style="background-color:#f1f1f1">
+      <div>
         <button type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>

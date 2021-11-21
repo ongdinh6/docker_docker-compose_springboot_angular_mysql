@@ -1,30 +1,58 @@
-<!-- <div class="main">
-  <input [(ngModel)]="username" type="text" [title]="'That is ' + username"/>
-  <button (click)="setUsername(username)">say hello</button>
-  <p *ngIf="username !==''; then showHello; else showWarning"></p>
-
-  <ng-template #showHello>
-    <h1>Hello, {{username}}</h1>
-  </ng-template>
-  <ng-template #showWarning>
-    <h1>Please enter your username</h1>
-  </ng-template>
-
-  <div class="fruit">
-    <ul *ngFor="let fruit of fruits; let i = index;">
-      <li>{{i + 1}}. {{fruit}}</li>
-    </ul>
+<div>
+  <div class="header h-auto">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container pt-3 pb-3">
+        <a class="navbar-brand" href="#">
+          Angular Wellcome
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/list-student" routerLinkActive="active">List Student</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-primary text-decoration-underline" aria-current="page"
+                  routerLink="/login-page" routerLinkActive="active">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/register-page" routerLinkActive="active">Register</a>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </nav>
   </div>
-</div> -->
-<!-- This is header of the page -->
-<div class="header">
-  <h1>WELLCOME TO ANGULAR </h1>
-  <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-  <nav>
-    <a routerLink="/login-page" routerLinkActive="active">Login</a>
-    <a routerLink="/register-page" routerLinkActive="active">Register</a>
-  </nav>
-  <hr/>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
 </div>
-<router-outlet></router-outlet>
-

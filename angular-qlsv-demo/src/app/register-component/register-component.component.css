@@ -8,6 +8,9 @@
   background: white;
   box-shadow: 5px 5px 15px grey;
 }
+input { 
+  font-size: 14px;
+}
 
 .card-header {
   padding-top: 20px;
