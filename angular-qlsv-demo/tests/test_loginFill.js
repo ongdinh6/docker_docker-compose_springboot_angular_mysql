@@ -12,7 +12,7 @@ test("Fill login form", async (t) => {
   await t.wait(1000);
 });
 
-test('Verify does not fill login form', async (t) =>{
+test('Verify do not fill login form', async (t) =>{
   await loginFill.submitLogin();
   await t.expect(Selector('.error').innerText).eql('Email or password is incorrect!');
   await t.wait(1000);
