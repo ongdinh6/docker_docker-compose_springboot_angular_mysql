@@ -17,7 +17,7 @@ test
     //     .expect(input.value).eql('2017-05-05');
     await studentFill.typeAddress('Binh Duong');
     await studentFill.submitSave();
-    await t.take
+    await t.takeScreenshot();
   });
 
 
@@ -29,21 +29,21 @@ test
       await t
             .click(Selector('a').withAttribute('id', 'detail2'))
             .navigateTo('/detail/2')
-            .click(Selector('input').withAttribute('name', 'fullName'))
-            .wait(1000)
-            .pressKey('ctrl+a backspace')
-            .wait(1000)
-            .typeText(Selector('input').withAttribute('name', 'fullName'), 'Hoang Nguyen Khoi')
+            // .click(Selector('input').withAttribute('name', 'fullName'))
+            // .wait(1000)
+            // .pressKey('ctrl+a backspace')
+            // .wait(1000)
+            .typeText(Selector('input').withAttribute('name', 'fullName'), 'Hoang Nguyen Khoi', {replace:true})
             .click(Selector('input').withAttribute('name', 'birthDay'))
             .wait(1000)
-            .pressKey('ctrl+a backspace')
-            .wait(1000)
-            .typeText(Selector('input').withAttribute('name', 'birthDay'), '11/07/1998')
+            // .pressKey('ctrl+a backspace')
+            // .wait(1000)
+            .typeText(Selector('input').withAttribute('name', 'birthDay'), '11/07/1998', {replace:true})
             .click(Selector('input').withAttribute('name', 'address'))
             .wait(1000)
-            .pressKey('ctrl+a backspace')
-            .wait(1000)
-            .typeText(Selector('input').withAttribute('name', 'address'), 'Hai Phong')
+            // .pressKey('ctrl+a backspace')
+            // .wait(1000)
+            .typeText(Selector('input').withAttribute('name', 'address'), 'Hai Phong', {replace:true})
             .wait(1000)
             .click(Selector('form'))
             .setNativeDialogHandler(()=>true)

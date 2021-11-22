@@ -1,0 +1,552 @@
+[
+  {
+    "description": "Router Link Test Suite",
+    "elements": [
+      {
+        "id": "ScenarioRouter link should be accessible",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Router link should be accessible",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_arouterLink.js:1:0"
+            },
+            "name": "Router link should be accessible",
+            "result": {
+              "duration": 9654,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Router link should be accessible</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Router Link Test Suite",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "96.0.4664.45"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      },
+      "reportTime": "2021-11-22T02:45:18.548Z",
+      "startTime": "2021-11-22T02:44:11.739Z"
+    },
+    "name": "Router Link Test Suite",
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@router"
+      },
+      {
+        "line": 0,
+        "name": "@link"
+      },
+      {
+        "line": 0,
+        "name": "@accessible"
+      },
+      {
+        "line": 0,
+        "name": "@suite"
+      }
+    ],
+    "uri": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_arouterLink.js:1"
+  },
+  {
+    "description": "Login Page Test Suite",
+    "elements": [
+      {
+        "id": "ScenarioFill login form",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Fill login form",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_loginFill.js:1:0"
+            },
+            "name": "Fill login form",
+            "result": {
+              "duration": 6134,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Fill login form</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioVerify do not fill login form",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Verify do not fill login form",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_loginFill.js:1:0"
+            },
+            "name": "Verify do not fill login form",
+            "result": {
+              "duration": 3707,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Verify do not fill login form</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioVerify login failed",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Verify login failed",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_loginFill.js:1:0"
+            },
+            "name": "Verify login failed",
+            "result": {
+              "duration": 4880,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Verify login failed</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Login Page Test Suite",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "96.0.4664.45"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      },
+      "reportTime": "2021-11-22T02:45:18.548Z",
+      "startTime": "2021-11-22T02:44:11.739Z"
+    },
+    "name": "Login Page Test Suite",
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@verify"
+      },
+      {
+        "line": 0,
+        "name": "@login"
+      },
+      {
+        "line": 0,
+        "name": "@failed"
+      },
+      {
+        "line": 0,
+        "name": "@fill"
+      },
+      {
+        "line": 0,
+        "name": "@form"
+      },
+      {
+        "line": 0,
+        "name": "@page"
+      },
+      {
+        "line": 0,
+        "name": "@suite"
+      }
+    ],
+    "uri": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_loginFill.js:1"
+  },
+  {
+    "description": "Register Page Test Suite",
+    "elements": [
+      {
+        "id": "ScenarioVerify register successful",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Verify register successful",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_registerFill.js:1:0"
+            },
+            "name": "Verify register successful",
+            "result": {
+              "duration": 11617,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Verify register successful</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioVerify register failed",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Verify register failed",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_registerFill.js:1:0"
+            },
+            "name": "Verify register failed",
+            "result": {
+              "duration": 5027,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Verify register failed</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Register Page Test Suite",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "96.0.4664.45"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      },
+      "reportTime": "2021-11-22T02:45:18.548Z",
+      "startTime": "2021-11-22T02:44:11.739Z"
+    },
+    "name": "Register Page Test Suite",
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@verify"
+      },
+      {
+        "line": 0,
+        "name": "@register"
+      },
+      {
+        "line": 0,
+        "name": "@failed"
+      },
+      {
+        "line": 0,
+        "name": "@successful"
+      },
+      {
+        "line": 0,
+        "name": "@page"
+      },
+      {
+        "line": 0,
+        "name": "@suite"
+      }
+    ],
+    "uri": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_registerFill.js:1"
+  },
+  {
+    "description": "Student Detail Page Test Suite",
+    "elements": [
+      {
+        "id": "ScenarioUse ClientFunction",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Use ClientFunction",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_studentFill.js:1:0"
+            },
+            "name": "Use ClientFunction",
+            "result": {
+              "duration": 2773,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Use ClientFunction</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioRedirect and fill form student info on detail page",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Redirect and fill form student info on detail page",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_studentFill.js:1:0"
+            },
+            "name": "Redirect and fill form student info on detail page",
+            "result": {
+              "duration": 8199,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Redirect and fill form student info on detail page</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioFullName is not fill",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "FullName is not fill",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_studentFill.js:1:0"
+            },
+            "name": "FullName is not fill",
+            "result": {
+              "duration": 7110,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">FullName is not fill</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      },
+      {
+        "id": "ScenarioError birth day does not match pattern",
+        "keyword": "Scenario",
+        "line": 0,
+        "name": "Error birth day does not match pattern",
+        "skipped": false,
+        "sourceLine": "undefined",
+        "status": "passed",
+        "steps": [
+          {
+            "hidden": false,
+            "keyword": ">",
+            "match": {
+              "location": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_studentFill.js:1:0"
+            },
+            "name": "Error birth day does not match pattern",
+            "result": {
+              "duration": 7505,
+              "status": "passed"
+            },
+            "tags": [],
+            "text": [
+              "<a href=\"#\">Error birth day does not match pattern</a>"
+            ]
+          }
+        ],
+        "tags": [],
+        "type": "scenario",
+        "uri": ""
+      }
+    ],
+    "id": "Student Detail Page Test Suite",
+    "keyword": "Feature",
+    "line": 0,
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "96.0.4664.45"
+      },
+      "device": "Windows",
+      "platform": {
+        "name": "windows",
+        "version": "10"
+      },
+      "reportTime": "2021-11-22T02:45:18.548Z",
+      "startTime": "2021-11-22T02:44:11.739Z"
+    },
+    "name": "Student Detail Page Test Suite",
+    "runInfo": {
+      "endTime": "2021-11-22T02:45:18.546Z",
+      "passed": 10,
+      "startTime": "2021-11-22T02:44:11.739Z",
+      "testCount": 10,
+      "userAgents": [
+        "Chrome 96.0.4664.45 / Windows 10"
+      ],
+      "warnings": []
+    },
+    "skipped": false,
+    "tags": [
+      {
+        "line": 0,
+        "name": "@error"
+      },
+      {
+        "line": 0,
+        "name": "@birth"
+      },
+      {
+        "line": 0,
+        "name": "@day"
+      },
+      {
+        "line": 0,
+        "name": "@does"
+      },
+      {
+        "line": 0,
+        "name": "@match"
+      },
+      {
+        "line": 0,
+        "name": "@pattern"
+      },
+      {
+        "line": 0,
+        "name": "@fullname"
+      },
+      {
+        "line": 0,
+        "name": "@fill"
+      },
+      {
+        "line": 0,
+        "name": "@redirect"
+      },
+      {
+        "line": 0,
+        "name": "@form"
+      },
+      {
+        "line": 0,
+        "name": "@student"
+      },
+      {
+        "line": 0,
+        "name": "@info"
+      },
+      {
+        "line": 0,
+        "name": "@detail"
+      },
+      {
+        "line": 0,
+        "name": "@page"
+      },
+      {
+        "line": 0,
+        "name": "@use"
+      },
+      {
+        "line": 0,
+        "name": "@clientfunction"
+      },
+      {
+        "line": 0,
+        "name": "@suite"
+      }
+    ],
+    "uri": "F:\\docker_docker-compose_springboot_angular_mysql\\angular-qlsv-demo\\tests\\test_studentFill.js:1"
+  }
+]
